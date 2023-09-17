@@ -3,10 +3,17 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Nasdaq {
 
-    private List<Observador> observadores = new ArrayList<Observador>();
+
+public class Nasdaq {
+    private List<Observador> observadores;
     private int estado;
+
+    public Nasdaq() {
+        this.observadores = new ArrayList<Observador>();
+    }
+
+
 
     public int getEstado() {
         return estado;

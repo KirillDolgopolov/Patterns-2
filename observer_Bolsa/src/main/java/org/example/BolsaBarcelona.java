@@ -8,7 +8,7 @@ public class BolsaBarcelona extends Observador{
     }
 
     @Override
-    void actualizar() {
+    protected void actualizar() {
 
         System.out.println("Message form BCN: Puntos NASDAQ: "+ this.subject.getEstado());
 

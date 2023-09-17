@@ -5,9 +5,16 @@ import java.util.List;
 
 
 public class Tienda {
-    private List<Integer> visas = new ArrayList<>();
-    private List<Integer> payPal = new ArrayList<>();
-    private List<Integer> cuentaBanc = new ArrayList<>();
+    private List<Integer> visas;
+    private List<Integer> payPal;
+    private List<Integer> cuentaBanc;
+
+    public Tienda() {
+this.visas = new ArrayList<>();
+this.payPal = new ArrayList<>();
+this.cuentaBanc = new ArrayList<>();
+
+    }
 
     public void doPayment (IPago pago){
         pago.processarPago();

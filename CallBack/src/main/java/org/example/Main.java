@@ -6,79 +6,10 @@ public class Main {
         Tienda zapatosMario = new Tienda();
 
 
-        IPago visaPay = new IPago() {
+        IPago visaPay = new VisaPago();
+        IPago payPal = new PayPalPago();
+        IPago banco = new CuentaBancariaPago();
 
-            int suma = 0;
-            public String type = "Visa";
-
-            public void setSuma(int euros) {
-                suma = euros;
-            }
-
-            public int getSum() {
-                return suma;
-            }
-
-            public String getType() {
-                return type;
-            }
-
-            @Override
-            public void processarPago() {
-
-                System.out.println("Pago por visa €" + suma);
-            }
-        };
-
-
-        IPago payPal = new IPago() {
-            int suma = 0;
-            public String type = "PayPal";
-
-            public int getSum() {
-                return suma;
-            }
-
-            @Override
-            public void setSuma(int euros) {
-                suma = euros;
-            }
-
-            public String getType() {
-                return type;
-            }
-
-            @Override
-            public void processarPago() {
-
-                System.out.println("Pago por PayPal €" + suma);
-            }
-        };
-
-
-        IPago banco = new IPago() {
-            int suma = 0;
-            public String type = "Cuenta";
-
-            public int getSum() {
-                return suma;
-            }
-
-            @Override
-            public void setSuma(int euros) {
-                suma = euros;
-            }
-
-            public String getType() {
-                return type;
-            }
-
-            @Override
-            public void processarPago() {
-
-                System.out.println("Pago por transferencia bancaria €" + suma);
-            }
-        };
 
         banco.setSuma(259999);
         zapatosMario.doPayment(banco);
@@ -87,6 +18,7 @@ public class Main {
         zapatosMario.doPayment(payPal);
 
         visaPay.setSuma(33);
+        zapatosMario.doPayment(visaPay);
         zapatosMario.doPayment(visaPay);
 
         System.out.println();

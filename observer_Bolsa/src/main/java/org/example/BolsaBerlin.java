@@ -8,7 +8,7 @@ public class BolsaBerlin extends Observador {
     }
 
     @Override
-    void actualizar() {
+    protected void actualizar() {
         System.out.println("Message form BRL: Puntos NASDAQ: " + this.subject.getEstado());
     }
 }

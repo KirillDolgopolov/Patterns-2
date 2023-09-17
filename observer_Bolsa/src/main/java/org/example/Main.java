@@ -10,7 +10,7 @@ public class Main {
         BolsaParis bolsa2 = new BolsaParis(theNDQ);
         BolsaBerlin bolsa3 = new BolsaBerlin(theNDQ);
 
-        theNDQ.setEstado(43);
+        theNDQ.setEstado(436);
 
     }
 }

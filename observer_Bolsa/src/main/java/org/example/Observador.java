@@ -2,8 +2,8 @@ package org.example;
 
 public abstract class Observador {
 
-     Nasdaq subject;
+    protected Nasdaq subject;
 
-    abstract void actualizar();
+    protected abstract void actualizar();
 
 }

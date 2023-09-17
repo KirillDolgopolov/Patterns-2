@@ -8,7 +8,7 @@ public class BolsaParis extends Observador {
     }
 
     @Override
-    void actualizar() {
+    protected void actualizar() {
         System.out.println("Message form PRS: Puntos NASDAQ: " + this.subject.getEstado());
     }
 }

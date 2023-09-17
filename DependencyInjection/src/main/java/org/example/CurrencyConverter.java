@@ -4,9 +4,9 @@ import java.text.DecimalFormat;
 
 public class CurrencyConverter {
 
-    private double usd = 1.01;
-    private double gbp = 0.8583;
-    private double monopolyCredit = 295634594549.26598;
+    private static double usd = 1.01;
+    private static double gbp = 0.8583;
+    private static double monopolyCredit = 295634594549.26598;
 
     public CurrencyConverter() {
     }
